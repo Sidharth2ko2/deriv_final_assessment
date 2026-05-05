@@ -10,7 +10,7 @@
     }
   },
   "provider": "mock",
-  "model": "llama3.1:8b",
+  "model": "heuristic-v1",
   "seed": 7,
-  "started_at": "2026-05-05T06:56:02.729917+00:00"
+  "started_at": "2026-05-05T07:15:21.916361+00:00"
 }
