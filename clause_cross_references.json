@@ -1,0 +1,50 @@
+[
+  {
+    "clause_a": "1",
+    "clause_b": "2",
+    "combined_risk_description": "Vendor amendment power compounds payment and suspension leverage.",
+    "combined_severity": "high"
+  },
+  {
+    "clause_a": "1",
+    "clause_b": "10",
+    "combined_risk_description": "Vendor amendment power compounds payment and suspension leverage.",
+    "combined_severity": "critical"
+  },
+  {
+    "clause_a": "2",
+    "clause_b": "5",
+    "combined_risk_description": "Aggressive payment remedies combined with low vendor liability concentrate downside on the client.",
+    "combined_severity": "critical"
+  },
+  {
+    "clause_a": "2",
+    "clause_b": "9",
+    "combined_risk_description": "Vendor amendment power compounds payment and suspension leverage.",
+    "combined_severity": "critical"
+  },
+  {
+    "clause_a": "3",
+    "clause_b": "7",
+    "combined_risk_description": "Data retention and deletion rights combine to increase loss-of-control risk.",
+    "combined_severity": "critical"
+  },
+  {
+    "clause_a": "4",
+    "clause_b": "7",
+    "combined_risk_description": "Data retention and deletion rights combine to increase loss-of-control risk.",
+    "combined_severity": "high"
+  },
+  {
+    "clause_a": "5",
+    "clause_b": "10",
+    "combined_risk_description": "Aggressive payment remedies combined with low vendor liability concentrate downside on the client.",
+    "combined_severity": "critical"
+  },
+  {
+    "clause_a": "9",
+    "clause_b": "10",
+    "combined_risk_description": "Vendor amendment power compounds payment and suspension leverage.",
+    "combined_severity": "critical"
+  }
+]

@@ -1,0 +1,234 @@
+{
+  "clauses": [
+    {
+      "clause_number": "1",
+      "clause_title": "SERVICES",
+      "clause_text": "Vendor shall provide software-as-a-service access to the Platform as described in Schedule A.\nVendor reserves the right to modify, suspend, or discontinue any feature of the Platform\nat any time without prior notice to Client.",
+      "word_count": 35,
+      "stage_1": {
+        "clause_number": "1",
+        "risk_category": "unilateral_modification",
+        "severity": "medium",
+        "one_sentence_risk_summary": "Service scope can be changed or suspended with limited customer protection.",
+        "is_non_standard": true
+      },
+      "stage_2": null,
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause is closer to market-standard vendor paper, though it still warrants review because service scope can be changed or suspended with limited customer protection.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "medium"
+    },
+    {
+      "clause_number": "2",
+      "clause_title": "PAYMENT TERMS",
+      "clause_text": "Client shall pay all invoices within 14 days of issue. Late payments shall accrue interest\nat 4% per month compounded daily. Vendor may suspend services immediately upon any payment\nbeing 1 day overdue, without notice.",
+      "word_count": 35,
+      "stage_1": {
+        "clause_number": "2",
+        "risk_category": "financial_exposure",
+        "severity": "high",
+        "one_sentence_risk_summary": "Payment remedies are unusually aggressive and give the vendor immediate operational leverage.",
+        "is_non_standard": true
+      },
+      "stage_2": null,
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause appears more vendor-favourable than a balanced enterprise position because payment remedies are unusually aggressive and give the vendor immediate operational leverage.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "high"
+    },
+    {
+      "clause_number": "3",
+      "clause_title": "DATA OWNERSHIP AND PROCESSING",
+      "clause_text": "All data uploaded by Client to the Platform (\"Client Data\") remains the property of Client.\nHowever, Vendor is hereby granted a perpetual, irrevocable, royalty-free licence to use,\nreproduce, modify, and distribute Client Data for the purposes of product improvement,\nanalytics, and training of machine learning models. This licence survives termination.",
+      "word_count": 50,
+      "stage_1": {
+        "clause_number": "3",
+        "risk_category": "data_rights",
+        "severity": "critical",
+        "one_sentence_risk_summary": "Vendor receives expansive ongoing rights over client data, including model training uses.",
+        "is_non_standard": true
+      },
+      "stage_2": {
+        "clause_number": "3",
+        "harm_mechanism": "This data_rights clause shifts material control or downside to the client because vendor receives expansive ongoing rights over client data, including model training uses.",
+        "precedent_framing": "Frame the ask as a request to align the contract with balanced enterprise practice, preserve continuity, and remove one-sided downside allocation.",
+        "redline_suggestions": [
+          "Limit the clause to a defined, contract-specific purpose.",
+          "Add notice, cure, or mutuality protections that reduce unilateral vendor discretion.",
+          "Carve out gross negligence, wilful misconduct, and core client rights from vendor-favourable limitations."
+        ],
+        "replacement_clause_text": "The parties agree that Clause 3 will apply only to the extent reasonably necessary to perform the Agreement, will not override core client ownership or remedy rights, and will be subject to prior written notice, commercially reasonable cure rights, and express carve-outs for gross negligence, wilful misconduct, and unauthorised use of Client Data."
+      },
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause appears more vendor-favourable than a balanced enterprise position because vendor receives expansive ongoing rights over client data, including model training uses.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "critical"
+    },
+    {
+      "clause_number": "4",
+      "clause_title": "CONFIDENTIALITY",
+      "clause_text": "Each party agrees to maintain the confidentiality of the other party's Confidential\nInformation. Vendor's confidentiality obligations shall not apply to information that\nVendor independently develops without reference to Client's information, or that Vendor\nreceives from a third party.",
+      "word_count": 38,
+      "stage_1": {
+        "clause_number": "4",
+        "risk_category": "data_rights",
+        "severity": "low",
+        "one_sentence_risk_summary": "Confidentiality clause is generally standard, though carve-outs still need review.",
+        "is_non_standard": true
+      },
+      "stage_2": null,
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause is closer to market-standard vendor paper, though it still warrants review because confidentiality clause is generally standard, though carve-outs still need review.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "low"
+    },
+    {
+      "clause_number": "5",
+      "clause_title": "LIABILITY",
+      "clause_text": "In no event shall Vendor be liable for any indirect, incidental, special, or consequential\ndamages. Vendor's total aggregate liability shall not exceed the fees paid by Client in\nthe one (1) month prior to the claim. This limitation applies even in cases of Vendor's\ngross negligence or wilful misconduct.",
+      "word_count": 49,
+      "stage_1": {
+        "clause_number": "5",
+        "risk_category": "liability_cap",
+        "severity": "critical",
+        "one_sentence_risk_summary": "Vendor limits liability so aggressively that serious vendor misconduct may go under-remedied.",
+        "is_non_standard": true
+      },
+      "stage_2": {
+        "clause_number": "5",
+        "harm_mechanism": "This liability_cap clause shifts material control or downside to the client because vendor limits liability so aggressively that serious vendor misconduct may go under-remedied.",
+        "precedent_framing": "Frame the ask as a request to align the contract with balanced enterprise practice, preserve continuity, and remove one-sided downside allocation.",
+        "redline_suggestions": [
+          "Limit the clause to a defined, contract-specific purpose.",
+          "Add notice, cure, or mutuality protections that reduce unilateral vendor discretion.",
+          "Carve out gross negligence, wilful misconduct, and core client rights from vendor-favourable limitations."
+        ],
+        "replacement_clause_text": "The parties agree that Clause 5 will apply only to the extent reasonably necessary to perform the Agreement, will not override core client ownership or remedy rights, and will be subject to prior written notice, commercially reasonable cure rights, and express carve-outs for gross negligence, wilful misconduct, and unauthorised use of Client Data."
+      },
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause appears more vendor-favourable than a balanced enterprise position because vendor limits liability so aggressively that serious vendor misconduct may go under-remedied.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "critical"
+    },
+    {
+      "clause_number": "6",
+      "clause_title": "INTELLECTUAL PROPERTY",
+      "clause_text": "Any customisations, integrations, or derivative works created by Vendor at Client's request\nshall remain the sole property of Vendor. Client is granted a non-exclusive,\nnon-transferable licence to use such works solely during the term of this Agreement.",
+      "word_count": 37,
+      "stage_1": {
+        "clause_number": "6",
+        "risk_category": "ip_ownership",
+        "severity": "high",
+        "one_sentence_risk_summary": "Vendor retains ownership of customer-funded deliverables, limiting the client's long-term control.",
+        "is_non_standard": true
+      },
+      "stage_2": null,
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause appears more vendor-favourable than a balanced enterprise position because vendor retains ownership of customer-funded deliverables, limiting the client's long-term control.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "high"
+    },
+    {
+      "clause_number": "7",
+      "clause_title": "TERMINATION",
+      "clause_text": "Either party may terminate this Agreement with 90 days written notice. Upon termination,\nClient shall have 7 days to export their data. After 7 days, Vendor may permanently delete\nall Client Data without further notice or liability.",
+      "word_count": 37,
+      "stage_1": {
+        "clause_number": "7",
+        "risk_category": "termination_rights",
+        "severity": "high",
+        "one_sentence_risk_summary": "Termination mechanics create material operational and data-retention risk for the client.",
+        "is_non_standard": true
+      },
+      "stage_2": null,
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause appears more vendor-favourable than a balanced enterprise position because termination mechanics create material operational and data-retention risk for the client.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "high"
+    },
+    {
+      "clause_number": "8",
+      "clause_title": "GOVERNING LAW",
+      "clause_text": "This Agreement shall be governed by the laws of the Cayman Islands. All disputes shall be\nresolved by binding arbitration in the Cayman Islands, with arbitration costs borne equally\nby both parties regardless of outcome.",
+      "word_count": 35,
+      "stage_1": {
+        "clause_number": "8",
+        "risk_category": "dispute_resolution",
+        "severity": "medium",
+        "one_sentence_risk_summary": "Dispute forum and cost allocation are vendor-favourable and may increase enforcement burden.",
+        "is_non_standard": true
+      },
+      "stage_2": null,
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause is closer to market-standard vendor paper, though it still warrants review because dispute forum and cost allocation are vendor-favourable and may increase enforcement burden.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "medium"
+    },
+    {
+      "clause_number": "9",
+      "clause_title": "MODIFICATIONS",
+      "clause_text": "Vendor may modify these terms at any time by posting updated terms on its website.\nClient's continued use of the Platform constitutes acceptance of the modified terms.",
+      "word_count": 27,
+      "stage_1": {
+        "clause_number": "9",
+        "risk_category": "unilateral_modification",
+        "severity": "critical",
+        "one_sentence_risk_summary": "Vendor can change core contract terms unilaterally without a negotiated amendment process.",
+        "is_non_standard": true
+      },
+      "stage_2": {
+        "clause_number": "9",
+        "harm_mechanism": "This unilateral_modification clause shifts material control or downside to the client because vendor can change core contract terms unilaterally without a negotiated amendment process.",
+        "precedent_framing": "Frame the ask as a request to align the contract with balanced enterprise practice, preserve continuity, and remove one-sided downside allocation.",
+        "redline_suggestions": [
+          "Limit the clause to a defined, contract-specific purpose.",
+          "Add notice, cure, or mutuality protections that reduce unilateral vendor discretion.",
+          "Carve out gross negligence, wilful misconduct, and core client rights from vendor-favourable limitations."
+        ],
+        "replacement_clause_text": "The parties agree that Clause 9 will apply only to the extent reasonably necessary to perform the Agreement, will not override core client ownership or remedy rights, and will be subject to prior written notice, commercially reasonable cure rights, and express carve-outs for gross negligence, wilful misconduct, and unauthorised use of Client Data."
+      },
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause appears more vendor-favourable than a balanced enterprise position because vendor can change core contract terms unilaterally without a negotiated amendment process.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "critical"
+    },
+    {
+      "clause_number": "10",
+      "clause_title": "INDEMNIFICATION",
+      "clause_text": "Client shall indemnify, defend, and hold harmless Vendor from any claims arising out of\nClient's use of the Platform, including claims arising from Vendor's own negligence.",
+      "word_count": 26,
+      "stage_1": {
+        "clause_number": "10",
+        "risk_category": "financial_exposure",
+        "severity": "critical",
+        "one_sentence_risk_summary": "Client indemnity extends to claims tied to vendor negligence, creating significant asymmetric exposure.",
+        "is_non_standard": true
+      },
+      "stage_2": {
+        "clause_number": "10",
+        "harm_mechanism": "This financial_exposure clause shifts material control or downside to the client because client indemnity extends to claims tied to vendor negligence, creating significant asymmetric exposure.",
+        "precedent_framing": "Frame the ask as a request to align the contract with balanced enterprise practice, preserve continuity, and remove one-sided downside allocation.",
+        "redline_suggestions": [
+          "Limit the clause to a defined, contract-specific purpose.",
+          "Add notice, cure, or mutuality protections that reduce unilateral vendor discretion.",
+          "Carve out gross negligence, wilful misconduct, and core client rights from vendor-favourable limitations."
+        ],
+        "replacement_clause_text": "The parties agree that Clause 10 will apply only to the extent reasonably necessary to perform the Agreement, will not override core client ownership or remedy rights, and will be subject to prior written notice, commercially reasonable cure rights, and express carve-outs for gross negligence, wilful misconduct, and unauthorised use of Client Data."
+      },
+      "market_standard_comparison": {
+        "market_standard_comparison": "General AI-generated comparison: this clause appears more vendor-favourable than a balanced enterprise position because client indemnity extends to claims tied to vendor negligence, creating significant asymmetric exposure.",
+        "basis": "LLM general knowledge, not a sourced legal database"
+      },
+      "final_severity": "critical"
+    }
+  ]
+}

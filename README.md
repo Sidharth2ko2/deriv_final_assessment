@@ -1,40 +1,108 @@
 # deriv_final_assessment
 
+Replayable contract-risk pipeline for the Deriv AI Engineer assessment. The implementation ingests `contract.txt` and `risk_framework.json`, deterministically extracts clauses, runs staged LLM-backed risk analysis, pauses for operator overrides, and produces a negotiation brief plus audit artifacts.
+
 ## Objective
 
-This repository contains the solution for the Deriv AI Engineer technical assessment. The goal of the project is to demonstrate a practical, AI-assisted engineering workflow under time constraints by solving the assigned problem clearly, efficiently, and with strong reasoning.
+Build a production-style, replayable pipeline that:
 
-## Assessment Brief
+- extracts numbered clauses deterministically before any LLM call,
+- scores every clause against the provided risk framework,
+- deep-analyzes only Stage 1 critical clauses with one call per clause,
+- enforces an operator review checkpoint before briefing generation,
+- preserves intermediate artifacts and LLM call logs,
+- generates AI-assisted negotiation outputs while clearly disclaiming legal advice.
 
-Your Deriv technical interview is ready.
+## Execution
 
-You've been invited to complete a hands-on technical challenge at your own convenience. Take a moment to read through the details below before you begin.
+Primary run command:
 
-| Category | Details |
-| --- | --- |
-| Format | Online Hands-on Technical Assessment |
-| Duration | 60 minutes |
-| When | Start anytime by clicking the Join Interview button |
-| Tools | You are free to use any AI tools of your choice |
+```bash
+python main.py run
+```
 
-## 5 Things To Know Before You Start
+Validation command:
 
-1. Have your AI tools and API key ready. You'll need both to complete this assessment. Make sure your preferred AI assistant and API key are set up and working before you begin.
-2. Think out loud as you work. Walk through your reasoning and decisions during the session, since your audio is recorded as part of the assessment.
-3. Your camera must remain on for the full duration of the session.
-4. Screen sharing is required throughout the assessment and must remain active until the session ends.
-5. Submit your work before you exit. Push your work to your public GitHub repository or upload the completed document before ending the session.
+```bash
+python validate.py
+```
 
-## Project Goal
+The pipeline now defaults to local Ollama with `llama3.1:8b`. Start Ollama and pull the model first:
 
-The objective of this project is to:
+```bash
+ollama pull llama3.1:8b
+python main.py run
+```
 
-- build a complete and working solution within the allotted time,
-- use AI tools effectively as part of the implementation workflow,
-- communicate technical reasoning clearly while solving the task,
-- maintain clean, structured, and reviewable project output,
-- prepare the final deliverable for submission through GitHub.
+If you want a deterministic local smoke test with no model dependency:
 
-## Note
+```bash
+python main.py run --provider mock --model heuristic-v1
+```
 
-There is no single correct answer. The focus is on problem-solving approach, engineering judgment, and how effectively AI is used to maximize output within the available time.
+If you want a remote OpenAI-compatible endpoint instead:
+
+```bash
+export LLM_PROVIDER=openai
+export OPENAI_API_KEY=your_key
+export LLM_MODEL=gpt-4.1-mini
+python main.py run
+```
+
+You can also point the default local path at a non-default Ollama endpoint:
+
+```bash
+export LLM_BASE_URL=http://localhost:11434/v1
+export LLM_MODEL=llama3.1:8b
+python main.py run
+```
+
+## Stage Machine
+
+The controller enforces this exact sequence:
+
+```text
+INIT
+-> INPUTS_LOADED
+-> CLAUSES_EXTRACTED
+-> CLAUSES_RISK_SCORED
+-> CRITICAL_CLAUSES_ANALYSED
+-> OPERATOR_REVIEW_COMPLETE
+-> NEGOTIATION_BRIEF_GENERATED
+-> OPTIONAL_OUTPUTS_GENERATED
+-> VALIDATION_COMPLETE
+-> RESULTS_FINALISED
+```
+
+## Produced Artifacts
+
+Required artifacts:
+
+- `contract.txt`
+- `risk_framework.json`
+- `extracted_clauses.json`
+- `risk_analysis.json`
+- `operator_overrides.json`
+- `negotiation_brief.md`
+- `llm_calls.jsonl`
+
+Attempted optional artifacts:
+
+- `redlined_contract.md`
+- `clause_cross_references.json`
+- `signature_risk_score.json`
+
+Supporting internal artifacts:
+
+- `pipeline_state.json`
+- `run_manifest.json`
+
+## Implementation Notes
+
+- Clause extraction is deterministic regex-based code in [pipeline/extraction.py](/Users/sidhu/Desktop/Deriv_final_assessment/pipeline/extraction.py:1).
+- LLM calls are logged one-per-line in `llm_calls.jsonl` with stage, clause number, provider, model, prompt hash, and artifact references.
+- Local Ollama runs use the OpenAI-compatible `v1/chat/completions` endpoint with a fixed seed for better replayability.
+- Stage 1 scoring is one call for all clauses.
+- Stage 2 deep analysis is one separate call for each critical clause.
+- Operator overrides are persisted and applied to downstream final severities.
+- Markdown outputs are explicitly marked as AI-generated analysis and not legal advice.

@@ -1,0 +1,16 @@
+{
+  "inputs": {
+    "contract.txt": {
+      "path": "contract.txt",
+      "bytes": 2764
+    },
+    "risk_framework.json": {
+      "path": "risk_framework.json",
+      "bytes": 558
+    }
+  },
+  "provider": "mock",
+  "model": "llama3.1:8b",
+  "seed": 7,
+  "started_at": "2026-05-05T06:56:02.729917+00:00"
+}
